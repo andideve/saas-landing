@@ -11,6 +11,7 @@ import {
   ButtonAnchor,
   Image,
   Button,
+  Toggle,
   media,
 } from '@andideve/ids-react';
 import styled from '@emotion/styled';
@@ -22,8 +23,6 @@ import { StepperList, StepperItem } from '../containers/organisms/stepper';
 import { AdvantageList, AdvantageItem } from '../containers/organisms/advantage';
 import { TestimonialList, TestimonialItem } from '../containers/organisms/testimonial';
 import { PlanList, PlanItem } from '../containers/organisms/plan';
-
-import Toggle from '../components/molecules/toggle';
 
 import useToggle from '../hooks/use-toggle';
 
@@ -342,10 +341,14 @@ const sections = {
           </Text>
           <Box mx="1rem" className="inline-flex">
             <Toggle
-              label="Set to Yearly and get save 65%"
+              title="Set to Yearly and get save 65%"
               name="yearly"
               checked={yearlyToggle.checked}
               onChange={yearlyToggle.onChange}
+              _size={{
+                circleSize: '1.75rem',
+                space: { py: '0.25rem', px: '0.25rem' },
+              }}
             />
           </Box>
           <Text size="xl" fontWeight="semibold">

@@ -1,20 +1,13 @@
 import { media, Theme } from '@andideve/ids-react';
-import { styles } from '@andideve/ids-react/dist/styles';
 
 const global = (theme: Theme) => `
   :root {
     --g-color-system-accent: hsl(252deg, 96%, 66%);
-    --g-color-system-accent--accessible: hsl(252deg, 96%, 66%);
-    color-scheme: ${theme.colorMode};
     font-size: 14px;
   }
   ${media('lg')} {
     :root { font-size: 16px; }
   }
-  ${styles.flexbox}
-  ${styles.layouts}
-  ${styles.size}
-  ${styles.typography}
 
   #__next {
     position: relative;
@@ -32,7 +25,7 @@ const global = (theme: Theme) => `
   // Colors
 
   .color-primary {
-    color: var(--g-color-system-accent--accessible);
+    color: var(--g-color-system-accent);
   }
   .color-secondary,
   .color-secondary--hoverable {
